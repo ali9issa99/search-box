@@ -54,12 +54,28 @@ const App = () => {
     });
   };
 
+  const filteredArticles= articles.filter(
+    (article)=> 
+      article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      article.content.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+
   return (
     <div className="main-container">
       <h1>Search</h1>
-      <input type="text" placeholder="Search" className="search-input" />
+      <input type="text" placeholder="Search" value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} className="search-input"  />
 
-      <div className="articles"></div>
+      <div className="articles">
+        {filteredArticles.map((article, index) => {
+          <div key={index} className="article">
+            <h2>{highlightText(article.title, searchTerm)}</h2>
+            <p>{highlightText(article.content, searchTerm)}</p>
+          </div>;
+        })}
+        {filteredArticles.length === 0 && (
+          <p className="no-result">No articles found.</p>
+        )}
+      </div>
     </div>
   );
 };
