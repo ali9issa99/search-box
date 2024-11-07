@@ -4,11 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Instructions to run the app:
 
-In order to run the app, first copy the github link, and clone it to the directory you want.
-Then open the file in which the project is in now.
-Run the `npm install` script in the terminal to install related packages.
-Run `npm start` script to run the app on the localhost of port(3000)
-Enjoy the Search-box APP!!! 
+1_In order to run the app, first copy the github link, and clone it to the directory you want.
+
+2_Then open the file in which the project is in now.
+
+3_Run the `npm install` script in the terminal to install related packages.
+
+4_Run `npm start` script to run the app on the localhost of port(3000).
+
+5_Enjoy the Search-box APP!!! 
 
 ## Available Scripts
 
