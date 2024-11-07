@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Instructions to run the app:
+
+In order to run the app, first copy the github link, and clone it to the directory you want.
+Then open the file in which the project is in now.
+Run the `npm install` script in the terminal to install related packages.
+Run `npm start` script to run the app on the localhost of port(3000)
+Enjoy the Search-box APP!!! 
+
 ## Available Scripts
 
 In the project directory, you can run:
