@@ -30,16 +30,44 @@ h1{
 
 .articles{
     text-align: left;
+    
 }
 
 .article{
     margin-bottom: 20px;
     padding: 15px;
     border-bottom: 1px solid #ddd;
+    border-radius: 40px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideIn 0.4s forwards;
+}
+
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.article:hover{
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: all 0.2 ease;
 }
 
 .highlight{
     background-color: yellow;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn{
+    from { opacity: 0;}
+    to{ opacity: 1;}
 }
 
 .no-result{
@@ -47,3 +75,31 @@ h1{
     text-align: center;
 }
 
+
+@media (max-width:480px){
+    .main-container{
+        padding: 10px;
+    }
+
+    .search-input{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .article{
+        padding:15px;
+        margin: 8px 0;
+    }
+
+    .article h2{
+        font-size: 16px;
+    }
+
+    .article p{
+        font-size: 12px;
+    }
+
+    .no-result{
+        font-size: 16px;
+    }
+}
